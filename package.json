@@ -1,0 +1,15 @@
+{
+  "name": "chatgpt-plugin",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:sandercamp/chatgpt-plugin.git",
+  "author": "Sander Camp <sander.camp@kabisa.nl>",
+  "license": "MIT",
+  "scripts": {
+    "start": "vercel dev",
+    "deploy": "vercel deploy --prod"
+  },
+  "devDependencies": {
+    "vercel": "^31.0.1"
+  }
+}
