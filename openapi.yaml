@@ -16,7 +16,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/getWelcomeResponse'
-  /todos:
+  api/todos:
     get:
       operationId: getTodos
       summary: Get the list of todos
