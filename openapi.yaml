@@ -6,6 +6,16 @@ info:
 servers:
   - url: http://localhost:5003
 paths:
+  /api:
+    operationId: test index
+    summary: Print hello world
+    responses:
+      "200":
+        description: OK
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/getWelcomeResponse'
   /todos/{username}:
     get:
       operationId: getTodos
