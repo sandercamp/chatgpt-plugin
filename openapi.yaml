@@ -3,19 +3,11 @@ info:
   title: TODO Plugin
   description: A plugin that allows the user to create and manage a TODO list using ChatGPT. If you do not know the user's username, ask them first before making queries to the plugin. Otherwise, use the username "global".
   version: 'v1'
+
 servers:
   - url: https://chatgpt-plugin-alpha.vercel.app
+
 paths:
-  /api:
-    operationId: test index
-    summary: Print hello world
-    responses:
-      "200":
-        description: OK
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/getWelcomeResponse'
   /api/todos:
     get:
       operationId: getTodos
@@ -26,9 +18,6 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/getTodosResponse'
-
-components:
-  schemas:
-    getTodosResponse:
-      type: string
+                type: array
+                items:
+                  type: string
