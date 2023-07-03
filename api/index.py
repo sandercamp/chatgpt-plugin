@@ -32,13 +32,13 @@ async def delete_todo(username):
 
 @app.get("/logo.png")
 async def plugin_logo():
-    filename = 'logo.png'
+    filename = '../logo.png'
     return await quart.send_file(filename, mimetype='image/png')
 
 @app.get("/ai-plugin.json")
 async def plugin_manifest():
     host = request.headers['Host']
-    with open("ai-plugin.json") as f:
+    with open("../ai-plugin.json") as f:
         text = f.read()
         return quart.Response(text, mimetype="text/json")
 
